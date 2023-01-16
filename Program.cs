@@ -2,27 +2,31 @@
 using System;
 using System.Text.RegularExpressions;
 
+using System;
+using System.Text.RegularExpressions;
+
 namespace UserRegistration
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome To Regex User Registration Problem");
-            Console.WriteLine("Regex User Registration Last Name");
+            Console.WriteLine("Regex UC 3 Email");
 
-            Console.WriteLine("Enter Last Name");
+            Console.WriteLine("Enter Email");
 
-            string last = Console.ReadLine();
-            //check the given input contain
-            if (Regex.Match(last, "^[A-Z][a-z]{3,}$").Success)
+            string email = Console.ReadLine();
+
+
+            if (Regex.Match(email, @"^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$").Success)
             {
-                Console.WriteLine("True");
+                Console.WriteLine("Success");
             }
             else
             {
-                Console.WriteLine("False");
+                Console.WriteLine("Failed");
             }
         }
     }
-}}
+}
+
