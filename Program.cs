@@ -1,8 +1,4 @@
 ﻿using System;
-using System;
-using System.Text.RegularExpressions;
-
-using System;
 using System.Text.RegularExpressions;
 
 namespace UserRegistration
@@ -11,14 +7,14 @@ namespace UserRegistration
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Regex UC 3 Email");
+            Console.WriteLine("Regex UC 4 Mobile Number");
 
-            Console.WriteLine("Enter Email");
+            Console.WriteLine("Enter Mobile Number");
 
-            string email = Console.ReadLine();
+            string mobileNo = Console.ReadLine();
 
 
-            if (Regex.Match(email, @"^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$").Success)
+            if (Regex.Match(mobileNo, @"^([0-9]{2})\s([0-9]{10})$").Success)
             {
                 Console.WriteLine("Success");
             }
@@ -29,4 +25,3 @@ namespace UserRegistration
         }
     }
 }
-
